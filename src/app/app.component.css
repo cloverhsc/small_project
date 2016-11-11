@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+.block {
+    border:1px solid #ccc;
+    border-radius: 5px;
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
