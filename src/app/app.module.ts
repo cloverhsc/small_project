@@ -8,7 +8,6 @@ import { HeartBeatComponent } from './heart-beat/heart-beat.component';
 import { BreathComponent } from './breath/breath.component';
 import { BodyTemperatureComponent } from './body-temperature/body-temperature.component';
 import { BloodPressureComponent } from './blood-pressure/blood-pressure.component';
-import { BioDataComponent } from './bio-data/bio-data.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { BioDataComponent } from './bio-data/bio-data.component';
     HeartBeatComponent,
     BreathComponent,
     BodyTemperatureComponent,
-    BloodPressureComponent,
-    BioDataComponent
+    BloodPressureComponent
   ],
   imports: [
       BrowserModule,
