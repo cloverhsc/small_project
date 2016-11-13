@@ -11,4 +11,6 @@ body{
     flex-direction: column;
     justify-content: space-around;
     margin: auto;
+    max-width: 30%;
+    max-height: 40%;
 }
