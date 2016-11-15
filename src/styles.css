@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.section {
+    border-bottom: 1px solid #69a0d6;
+    max-width: 100%;
+}
+
+.show-data {
+    min-height: 10%;
+}

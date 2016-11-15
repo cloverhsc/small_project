@@ -9,6 +9,8 @@ import { BreathComponent } from './breath/breath.component';
 import { BodyTemperatureComponent } from './body-temperature/body-temperature.component';
 import { BloodPressureComponent } from './blood-pressure/blood-pressure.component';
 
+import { GetDataInterfaceService }  from './get-data-interface.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { BloodPressureComponent } from './blood-pressure/blood-pressure.componen
       FormsModule,
       HttpModule
   ],
-  providers: [],
+  providers: [ GetDataInterfaceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

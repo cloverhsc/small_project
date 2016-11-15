@@ -1,17 +1,8 @@
 <div class="block info person ">
-    <p>{{title}}</p>
+    <h2 class="text-warning">{{title}}</h2>
+    <img src="../assets/BMO.gif" />
     <app-heart-beat></app-heart-beat>
     <app-breath></app-breath>
     <app-body-temperature></app-body-temperature>
     <app-blood-pressure></app-blood-pressure>
 </div>
-
-<hr />
-<p>
-    {{dt}}
-</p>
-<button class="btn btn-default" (click)="showDT()">showTime</button>
-<!-- <button class="btn btn-default" (click)="showTime()">showTime</button>
-<p class="text-info" *ngIf="count">count: {{count}}</p>
-<p class="text-info" *ngIf="i">i: {{i}}</p>
-<p class="text-info" *ngIf="val"> val: {{val}}</p> -->
