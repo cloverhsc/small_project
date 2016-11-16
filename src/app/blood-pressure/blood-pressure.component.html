@@ -1,4 +1,30 @@
 <div class="col-sm-12 section">
     <h3 class="text-primary">blood-pressure:</h3>
     <p class="text-success show-data">{{data}}</p>
+    <button class="btn btn-primary" (click)="getData()">Get Data</button>
+    <p>
+        {{errorMessage}}
+    </p>
+    <div *ngIf="userData">
+        <ul *ngFor="let u of userData">
+            <h4>id: {{u.id}}</h4>
+            <li>author: {{u.author.username}}</li>
+            <li>photos: {{u.photos}}</li>
+            <li>title: {{u.title}}</li>
+            <li>body: {{u.body}}</li>
+        </ul>
+    </div>
+    <!-- <ul>
+        <li *ngFor="let user of userData">
+            {{user.author}}
+        </li>
+    </ul> -->
+    <!-- <button class="btn btn-primary" (click)="getUserResp()">Get Response</button>
+    <p>
+        {{resp}}
+    </p> -->
+    <!-- <button class="btn btn-primary" (click)="getUserJson()">Get Json</button>
+    <p>
+        {{jsn}}
+    </p> -->
 </div>
