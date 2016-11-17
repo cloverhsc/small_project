@@ -14,3 +14,8 @@ body{
     max-width: 30%;
     max-height: 40%;
 }
+
+.logo{
+    max-width: 350px;
+    max-height: 345px;
+}
