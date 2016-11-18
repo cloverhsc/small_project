@@ -1,18 +1,6 @@
 <div class="block info person ">
     <h2 class="text-warning">{{userData?.name}}</h2>
     <img src="../assets/BMO.gif" class="logo"/>
-    <!-- <p>
-        blood pressure: {{userData?.bloodpressure}}
-    </p>
-    <p>
-        body temperature: {{userData?.bodytemperature}}
-    </p>
-    <p>
-        heart beat: {{userData?.heartbeat}}
-    </p>
-    <p>
-        breath: {{userData?.breath}}
-    </p> -->
     <app-heart-beat [heartbeat]='userData?.heartbeat'></app-heart-beat>
     <app-breath [breath]='userData?.breath'></app-breath>
     <app-body-temperature [bodytemperature]='userData?.bodytemperature'></app-body-temperature>
