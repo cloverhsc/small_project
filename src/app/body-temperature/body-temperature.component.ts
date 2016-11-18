@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import {GetDataInterfaceService} from '../get-data-interface.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-body-temperature',
@@ -10,14 +8,13 @@ import {GetDataInterfaceService} from '../get-data-interface.service';
 export class BodyTemperatureComponent implements OnInit {
     // private data: number;
     // private getDT: GetDataInterfaceService = new GetDataInterfaceService();
-    private data: number = 0;
+    private data: string;
+    public errorMessage: string = '';
+    @Input() bodytemperature: string;
     constructor(
     ) {}
 
     ngOnInit() {
-        // setInterval(
-        //     () => this.data = this.getDT.getData()
-        // , 3000);
     }
 
 }

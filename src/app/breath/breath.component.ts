@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import {GetDataInterfaceService} from '../get-data-interface.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-breath',
@@ -10,14 +8,13 @@ import {GetDataInterfaceService} from '../get-data-interface.service';
 export class BreathComponent implements OnInit {
     // private data: number;
     // private getDT: GetDataInterfaceService = new GetDataInterfaceService();
-    private data: number = 0;
+    private data: number;
+    public errorMessage: string = '';
+    @Input() breath: number;
     constructor(
     ) {}
 
     ngOnInit() {
-        // setInterval(
-        //     () => this.data = this.getDT.getData()
-        // , 3000);
     }
 
 }

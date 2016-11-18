@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Jsonp } from '@angular/http';
+import { Http, Response, Jsonp, Headers, RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -17,7 +17,7 @@ import { User } from './user';
 
 @Injectable()
 export class GetDataInterfaceService {
-    private dataUrl = 'http://localhost:8000/api/posts/';
+    private dataUrl = 'http://localhost:8000/api/profile/';
     public dt = [ 'A', 'B', 'C', 'D', 'E', 'F'];
     // constructor(private http: Http) { }
     constructor(
@@ -30,8 +30,14 @@ export class GetDataInterfaceService {
             .map((res: Response) => res.json()).catch(this.handleError);
     }*/
 
-    getUserData(): Observable<User[]> {
-        return Observable.interval(3000).concatMap(() => this.http.get(this.dataUrl)
+    getUserData(): Observable<User> {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        return Observable.interval(5000).concatMap(() => this.http.post(
+                this.dataUrl,
+                {'id': 1},
+                options
+            )
             .map((res: Response) => res.json()).catch(this.handleError));
     }
 

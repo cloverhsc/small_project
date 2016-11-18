@@ -1,19 +1,7 @@
 <div class="col-sm-12 section">
     <h3 class="text-primary">blood-pressure:</h3>
-    <p class="text-success show-data">{{data}}</p>
-    <button class="btn btn-primary" (click)="getData()">Get Data</button>
+    <p class="text-success show-data">{{bloodpressure}}</p>
     <p>
         {{errorMessage}}
     </p>
-    <div *ngIf="userData">
-        <ul *ngFor="let u of userData">
-            <h4>id: {{u.id}}</h4>
-            <li>author: {{u.author.username}}</li>
-            <li>photos: {{u.photos}}</li>
-            <li>title: {{u.title}}</li>
-            <li>body: {{u.body}}</li>
-        </ul>
-    </div>
-    <button class="btn btn-danger" (click)="cancelGet()">Cancel</button>
-    <button class="btn btn-primary" (click)="tryFlatMap()">FlatMap</button>
 </div>
