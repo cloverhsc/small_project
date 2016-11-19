@@ -6,3 +6,12 @@
     <app-body-temperature [bodytemperature]='userData?.bodytemperature'></app-body-temperature>
     <app-blood-pressure [bloodpressure]='userData?.bloodpressure'></app-blood-pressure>
 </div>
+
+<div class="block info person ">
+    <h2 class="text-warning">{{userData1?.name}}</h2>
+    <img src="../assets/BMO.gif" class="logo"/>
+    <app-heart-beat [heartbeat]='userData1?.heartbeat'></app-heart-beat>
+    <app-breath [breath]='userData1?.breath'></app-breath>
+    <app-body-temperature [bodytemperature]='userData1?.bodytemperature'></app-body-temperature>
+    <app-blood-pressure [bloodpressure]='userData1?.bloodpressure'></app-blood-pressure>
+</div>

@@ -11,8 +11,11 @@ import { User } from './user';
 export class AppComponent implements OnInit {
     title = 'Biotrump';
     userData: User;
+    userData1: User;
     errorMessage: string = '';
+    errorMessage1: string = '';
     private subs;
+    private subs1;
 
     constructor(
         private dataService: GetDataInterfaceService
@@ -23,6 +26,11 @@ export class AppComponent implements OnInit {
             (data) => this.userData = data,
             (error) => this.errorMessage = error
         );
+
+        this.subs1 = this.dataService.getUserData().subscribe(
+            (data) => this.userData1 = data,
+            (error) => this.errorMessage1 = error
+        )
     }
 
     ngOnInit() {
